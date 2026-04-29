@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <!-- Shield -->
+  <path d="M100 10 L185 55 L185 140 C185 180 150 210 100 230 C50 210 15 180 15 140 L15 55 Z" fill="#1B1464" stroke="#1B1464" stroke-width="2"/>
+  
+  <!-- Cyan stripes -->
+  <rect x="30" y="120" width="140" height="6" rx="3" fill="#00AEEF" opacity="0.9"/>
+  <rect x="35" y="130" width="130" height="5" rx="2.5" fill="#00AEEF" opacity="0.7"/>
+  <rect x="40" y="139" width="120" height="4" rx="2" fill="#00AEEF" opacity="0.5"/>
+  
+  <!-- Sun/Star burst -->
+  <g transform="translate(100,65)" fill="white">
+    <polygon points="0,-35 4,-12 -4,-12" />
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(30)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(60)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(90)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(120)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(150)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(180)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(210)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(240)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(270)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(300)"/>
+    <polygon points="0,-35 4,-12 -4,-12" transform="rotate(330)"/>
+    <circle cx="0" cy="0" r="12" fill="white"/>
+  </g>
+  
+  <!-- Open Book -->
+  <g transform="translate(100,115)" fill="white" stroke="white" stroke-width="0.5">
+    <path d="M-20,10 Q-20,-8 0,-12 L0,10 Z" fill="white" opacity="0.9"/>
+    <path d="M20,10 Q20,-8 0,-12 L0,10 Z" fill="white" opacity="0.9"/>
+    <line x1="-15" y1="-2" x2="-3" y2="-6" stroke="#1B1464" stroke-width="0.8"/>
+    <line x1="-15" y1="2" x2="-3" y2="-2" stroke="#1B1464" stroke-width="0.8"/>
+    <line x1="-14" y1="6" x2="-3" y2="2" stroke="#1B1464" stroke-width="0.8"/>
+    <line x1="15" y1="-2" x2="3" y2="-6" stroke="#1B1464" stroke-width="0.8"/>
+    <line x1="15" y1="2" x2="3" y2="-2" stroke="#1B1464" stroke-width="0.8"/>
+    <line x1="14" y1="6" x2="3" y2="2" stroke="#1B1464" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Letters A G S -->
+  <text x="82" y="85" fill="#00AEEF" font-size="14" font-weight="bold" font-family="serif">A</text>
+  <text x="108" y="85" fill="#00AEEF" font-size="14" font-weight="bold" font-family="serif">S</text>
+  <text x="95" y="100" fill="#00AEEF" font-size="14" font-weight="bold" font-family="serif">G</text>
+</svg>

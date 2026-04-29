@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom Scrollbar Styling - Global */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+  background: #1B1464; /* Brand Primary */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00AEEF; /* Brand Secondary */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1B1464 transparent;
+}
+
+
+@theme {
+  --color-primary: #1B1464;
+  --color-secondary: #00AEEF;
+  --color-accent: #0077B6;
+  --color-neutral: #FFFFFF;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFFF;
+    --foreground: #171717;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+  }
 }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes rotate-border {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-rotate-border {
+  animation: rotate-border 4s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0.5); 
+    box-shadow: 0 0 0 white;
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+    box-shadow: 0 0 10px 2px white;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s infinite ease-in-out;
+}
+
