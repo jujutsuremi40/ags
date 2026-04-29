@@ -18,7 +18,7 @@ function StatCounter({ value }: { value: string }) {
   useEffect(() => {
     if (isInView) {
       const numericValue = parseInt(value.replace(/[,+]/g, ''));
-      const controls = animate(count, numericValue, { duration: 2.5, ease: "easeOut" });
+      const controls = animate(count, numericValue, { duration: 2.5, ease: "easeOut", delay: 0.5 });
       return controls.stop;
     }
   }, [isInView, count, value]);
@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-6 pb-16 md:pt-0 md:pb-0 md:min-h-[90vh] flex items-start md:items-center justify-center overflow-hidden bg-white">
+      <section className="relative pt-20 pb-16 md:pt-0 md:pb-0 md:min-h-[90vh] flex items-start md:items-center justify-center overflow-hidden bg-white">
         {/* Subtle grid pattern for texture */}
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] opacity-50"></div>
 
@@ -123,10 +123,10 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-8xl font-black text-primary mb-4 md:mb-8 leading-[1.05] tracking-tighter"
+              className="text-[9vw] leading-[1.1] sm:text-5xl md:text-8xl font-black text-primary mb-4 md:mb-8 md:leading-[1.05] tracking-tighter"
               style={{ fontFamily: "'Segoe UI', Arial, Helvetica, sans-serif" }}
             >
-              Nurturing <span className="text-secondary [-webkit-text-stroke:1px_#1B1464] md:[-webkit-text-stroke:2px_#1B1464]">Excellence</span> <br />
+              <span className="whitespace-nowrap">Nurturing <span className="text-secondary [-webkit-text-stroke:1px_#1B1464] md:[-webkit-text-stroke:2px_#1B1464]">Excellence</span></span> <br />
               In Every Student.
             </motion.h1>
 
