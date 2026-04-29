@@ -184,7 +184,7 @@ export default function Home() {
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-16">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-16">
             <div className="md:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
@@ -254,28 +254,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Stats Section - Mobile/Tablet Only (Below Empower Section) */}
-      <section className="relative px-4 py-10 md:hidden bg-white">
-        <div className="container mx-auto max-w-4xl bg-white py-6 px-4 relative overflow-hidden border-t border-b border-black">
-          <div className="grid grid-cols-4 gap-1 text-center divide-x divide-gray-100 relative z-10">
-            {[
-              { icon: Users, label: "Students", value: "1,200+" },
-              { icon: GraduationCap, label: "Teachers", value: "85+" },
-              { icon: BookOpen, label: "Classes", value: "40+" },
-              { icon: Trophy, label: "Awards", value: "150+" },
-            ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center px-0">
-                <div className="w-8 h-8 bg-black/5 rounded-md flex items-center justify-center text-black mb-1 transform hover:scale-110 transition-all">
-                  <stat.icon className="w-4 h-4" />
-                </div>
-                <h3 className="text-[12px] sm:text-sm font-black text-black leading-none mb-0.5 tracking-tight">
-                  <StatCounter value={stat.value} />
-                </h3>
-                <p className="text-[6px] sm:text-[8px] text-gray-500 font-bold uppercase tracking-widest">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Why Choose Us */}
