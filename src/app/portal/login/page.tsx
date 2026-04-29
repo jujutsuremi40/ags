@@ -36,7 +36,8 @@ function LoginForm() {
             type: 'teacher',
             id: found.staffId,
             name: found.name,
-            role: found.role
+            role: found.role,
+            loginTime: Date.now()
           }));
           router.push('/portal/teacher');
           return;
@@ -61,7 +62,8 @@ function LoginForm() {
           name: isStudent ? foundUser.name : `Parent of ${foundUser.name}`,
           class: foundUser.cls,
           section: foundUser.section,
-          rollNo: foundUser.rollNo
+          rollNo: foundUser.rollNo,
+          loginTime: Date.now()
         }));
         router.push('/portal/dashboard');
       } else {
