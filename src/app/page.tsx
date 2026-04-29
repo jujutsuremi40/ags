@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 md:pt-0 md:pb-0 md:min-h-[90vh] flex items-start md:items-center justify-center overflow-hidden bg-white">
+      <section className="relative pt-6 pb-16 md:pt-0 md:pb-0 md:min-h-[90vh] flex items-start md:items-center justify-center overflow-hidden bg-white">
         {/* Subtle grid pattern for texture */}
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] opacity-50"></div>
 
@@ -123,7 +123,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-8xl font-black text-primary mb-4 md:mb-8 leading-[1.05] tracking-tighter"
+              className="text-6xl md:text-8xl font-black text-primary mb-4 md:mb-8 leading-[1.05] tracking-tighter"
               style={{ fontFamily: "'Segoe UI', Arial, Helvetica, sans-serif" }}
             >
               Nurturing <span className="text-secondary [-webkit-text-stroke:1px_#1B1464] md:[-webkit-text-stroke:2px_#1B1464]">Excellence</span> <br />
