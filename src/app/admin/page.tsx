@@ -748,11 +748,11 @@ export default function AdminPage() {
                   />
                 </div>
                 <div className="flex items-center gap-3 w-full md:w-auto">
-                   <Filter size={18} className="text-gray-400" />
+                   <Filter size={18} className="text-gray-400 flex-shrink-0" />
                    <select 
                     value={classFilter}
                     onChange={(e) => setClassFilter(e.target.value)}
-                    className="bg-gray-50 border border-gray-100 px-4 py-2 rounded-lg text-sm font-bold outline-none cursor-pointer"
+                    className="bg-gray-50 border border-gray-100 px-4 py-2 rounded-lg text-sm font-bold outline-none cursor-pointer w-full md:w-auto"
                    >
                      <option value="All">All Classes</option>
                      {classItems.map(c => <option key={c.id} value={c.name}>{c.name}</option>)}
@@ -797,7 +797,7 @@ export default function AdminPage() {
       {/* Add Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setShowModal(false)}>
-          <div className="bg-white rounded-[2.5rem] p-10 w-full max-w-lg shadow-2xl overflow-y-auto max-h-[90vh]" onClick={e => e.stopPropagation()}>
+          <div className="bg-white rounded-3xl md:rounded-[2.5rem] p-6 md:p-10 w-full max-w-lg shadow-2xl overflow-y-auto max-h-[90vh]" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-8">
               <h3 className="text-2xl font-black text-primary tracking-tight uppercase">
                 {editingItem ? `Edit ${modalType === 'notices' ? 'Notice' : modalType === 'staff' ? 'Teacher' : modalType === 'students' ? 'Student' : modalType === 'classes' ? 'Class' : modalType === 'gallery' ? 'Photo' : modalType.slice(0, -1)} Details` : `Add New ${modalType === 'notices' ? 'Notice' : modalType === 'staff' ? 'Teacher' : modalType === 'students' ? 'Student' : modalType === 'classes' ? 'Class' : modalType === 'gallery' ? 'Photo' : modalType.slice(0, -1)}`}
@@ -836,7 +836,7 @@ export default function AdminPage() {
                          </button>
                        )}
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Student ID</label>
                         <input placeholder="AGS-XXXX" value={formData.studentId || ''} onChange={e => setFormData({...formData, studentId: e.target.value})} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold text-primary" />
@@ -849,7 +849,7 @@ export default function AdminPage() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Student Name</label>
                         <input placeholder="Full Name" value={formData.name || ''} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold text-primary" />
@@ -860,7 +860,7 @@ export default function AdminPage() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Class</label>
                         <select value={formData.cls || ''} onChange={e => setFormData({...formData, cls: e.target.value})} className="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold">
@@ -874,7 +874,7 @@ export default function AdminPage() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Roll No</label>
                         <input placeholder="24" value={formData.rollNo || ''} onChange={e => setFormData({...formData, rollNo: e.target.value})} className="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold text-primary" />
@@ -885,7 +885,7 @@ export default function AdminPage() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Parent Portal ID</label>
                         <input placeholder="P-XXXX" value={formData.parentId || ''} onChange={e => setFormData({...formData, parentId: e.target.value})} className="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold text-primary" />
@@ -911,7 +911,7 @@ export default function AdminPage() {
                          </button>
                        )}
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Staff ID</label>
                         <input placeholder="AGS-T00" value={formData.staffId || ''} onChange={e => setFormData({...formData, staffId: e.target.value})} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold text-primary" />
@@ -927,7 +927,7 @@ export default function AdminPage() {
                       <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Full Name</label>
                       <input placeholder="Teacher Name" value={formData.name || ''} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold text-primary" />
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[9px] font-black text-gray-400 uppercase tracking-widest ml-1">Official Email</label>
                         <input placeholder="email@abexsun.edu" value={formData.email || ''} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-secondary font-bold" />
