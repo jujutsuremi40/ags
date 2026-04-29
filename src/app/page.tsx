@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden bg-white py-12 md:py-0">
+      <section className="relative pt-32 pb-16 md:pt-0 md:pb-0 md:min-h-[90vh] flex items-start md:items-center justify-center overflow-hidden bg-white">
         {/* Subtle grid pattern for texture */}
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] opacity-50"></div>
 
@@ -114,7 +114,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-block px-4 py-1.5 md:px-5 md:py-2 rounded-full bg-primary/5 text-primary font-black text-[9px] md:text-xs mb-4 md:mb-8 tracking-[0.2em] uppercase border border-primary/10"
+              className="inline-block px-3 py-1 md:px-5 md:py-2 rounded-full bg-primary/5 text-primary font-black text-[7px] sm:text-[9px] md:text-xs mb-3 md:mb-8 tracking-[0.2em] uppercase border border-primary/10"
             >
               Admissions Open 2026-2027
             </motion.div>
@@ -123,7 +123,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-8xl font-black text-primary mb-4 md:mb-8 leading-[1.05] tracking-tighter"
+              className="text-[2.2rem] leading-[1] sm:text-5xl md:text-8xl font-black text-primary mb-4 md:mb-8 md:leading-[1.05] tracking-tighter"
               style={{ fontFamily: "'Segoe UI', Arial, Helvetica, sans-serif" }}
             >
               Nurturing <span className="text-secondary [-webkit-text-stroke:1px_#1B1464] md:[-webkit-text-stroke:2px_#1B1464]">Excellence</span> <br />
@@ -160,21 +160,21 @@ export default function Home() {
       {/* Stats Section */}
       <section className="relative z-20 -mt-10 px-4">
         <div className="container mx-auto max-w-4xl bg-white py-4 md:py-5 px-2 md:px-6 relative overflow-hidden border-t border-b border-black">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 gap-x-2 md:gap-4 text-center md:divide-x divide-gray-100 relative z-10">
+          <div className="grid grid-cols-4 gap-1 md:gap-4 text-center divide-x divide-gray-100 relative z-10">
             {[
               { icon: Users, label: "Students", value: "1,200+" },
               { icon: GraduationCap, label: "Teachers", value: "85+" },
               { icon: BookOpen, label: "Classes", value: "40+" },
               { icon: Trophy, label: "Awards", value: "150+" },
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center px-2 md:px-4">
-                <div className="w-8 h-8 md:w-9 md:h-9 bg-black/5 rounded-md md:rounded-lg flex items-center justify-center text-black mb-1 md:mb-2 transform hover:scale-110 transition-all">
-                  <stat.icon className="w-4 h-4 md:w-5 md:h-5" />
+              <div key={i} className="flex flex-col items-center px-0 sm:px-1 md:px-4">
+                <div className="w-6 h-6 md:w-9 md:h-9 bg-black/5 rounded-md md:rounded-lg flex items-center justify-center text-black mb-1 md:mb-2 transform hover:scale-110 transition-all">
+                  <stat.icon className="w-3 h-3 md:w-5 md:h-5" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black text-black leading-none mb-1 tracking-tight">
+                <h3 className="text-[11px] sm:text-sm md:text-2xl font-black text-black leading-none mb-0.5 md:mb-1 tracking-tight">
                   <StatCounter value={stat.value} />
                 </h3>
-                <p className="text-[9px] md:text-[10px] text-gray-500 font-bold uppercase tracking-widest">{stat.label}</p>
+                <p className="text-[6px] sm:text-[7px] md:text-[10px] text-gray-500 font-bold uppercase tracking-widest">{stat.label}</p>
               </div>
             ))}
           </div>
