@@ -33,9 +33,9 @@ export default function ContactPage() {
         },
         body: JSON.stringify({
           access_key: "YOUR_TEST_ACCESS_KEY_HERE", // Go to web3forms.com and get a key for abdulraheemcrown5858@gmail.com
-          subject: `New Inquiry: ${form.subject}`,
           from_name: "Abexsun Website Inquiry",
           ...form,
+          subject: `New Inquiry: ${form.subject}`,
         }),
       });
       setSent(true);
